@@ -24,53 +24,16 @@
         behaviors {
                 hm: homerow_mods {
                         compatible = "zmk,behavior-hold-tap";
-                        label = "HOMEROW_MODS";
                         #binding-cells = <2>;
                         tapping-term-ms = <200>;
-                        quick_tap_ms = <0>;
                         flavor = "tap-preferred";
                         bindings = <&kp>, <&kp>;
                 };
-                //                hs: homerow_shifts {
-                //                        compatible = "zmk,behavior-hold-tap";
-                //                        label = "HOMEROW_SHIFTS";
-                //                        #binding-cells = <2>;
-                //                        tapping-term-ms = <150>;
-                //                        quick_tap_ms = <0>;
-                //                        flavor = "balanced";
-                //                        bindings = <&kp>, <&kp>;
-                //                };
-                //                hsl: homerow_shifts_layer {
-                //                        compatible = "zmk,behavior-hold-tap";
-                //                        label = "HOMEROW_SHIFTS_LAYER";
-                //                        #binding-cells = <2>;
-                //                        tapping-term-ms = <150>;
-                //                        quick_tap_ms = <0>;
-                //                        flavor = "balanced";
-                //                        bindings = <&kp>, <&to>;
-                //                };
-                //                td: tapdance {
-                //                        compatible = "zmk,behavior-hold-tap";
-                //                        label = "TAPDANCE";
-                //                        #binding-cells = <2>;
-                //                        tapping-term-ms = <150>;
-                //                        quick_tap_ms = <0>;
-                //                        flavor = "tap-preferred";
-                //                        bindings = <&kp>, <&kp>;
-                //                };
-                //                bl: layertap {
-                //                        compatible = "zmk,behavior-hold-tap";
-                //                        label = "LAYERTAP";
-                //                        #binding-cells = <2>;
-                //                        tapping-term-ms = <150>;
-                //                        quick_tap_ms = <0>;
-                //                        flavor = "tap-preferred";
-                //                        bindings = <&to>, <&kp>;
-                //                };
         };
 
         combos {
-                combo_3 {
+                compatible = "zmk,combos";
+                combo_layer_3 {
                         timeout-ms = <50>;
                         key-positions = <34 41>;
                         bindings = <&to 3>;
@@ -157,7 +120,6 @@
                 };
         };
 };
-
 
 // Key positions:
 // ╭──────────┬───────────┬───────────┬───────────┬───────────┬───────────╮   ╭───────────┬───────────┬───────────┬───────────┬───────────┬───────────╮
