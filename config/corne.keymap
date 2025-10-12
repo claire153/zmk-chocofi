@@ -73,7 +73,7 @@
        &none      &kp N6     &kp N7      &kp N8      &kp N9      &kp N0           &trans    &kp LEFT     &kp DOWN     &kp UP    &kp RIGHT     &none
 // ├──────────┼───────────┼───────────┼───────────┼───────────┼───────────┤   ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤
 // |   None   |   REDO    |   UNDO    |    CUT    |   COPY    |   PASTE   |   |    BT0    |    BT1    |    BT2    |    BT3    |   BT_CLR  |    None   |
-       &none     &trans      &trans      &trans       &trans     &trans      &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_CLR 2  &none
+       &none     &trans      &trans      &trans       &trans     &trans      &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_CLR   &none
 // ╰──────────┴───────────┴───────────┼───────────┼───────────┼───────────┤   ├───────────┼───────────┼───────────┴───────────┴───────────┼───────────╯
 //                                    |           |           |           |   |           |           |           |
                                           &trans      &trans      &trans          &trans      &trans      &trans
