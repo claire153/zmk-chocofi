@@ -25,20 +25,20 @@
                 hm: homerow_mods {
                         compatible = "zmk,behavior-hold-tap";
                         #binding-cells = <2>;
-                        tapping-term-ms = <200>;
                         flavor = "tap-preferred";
+                        tapping-term-ms = <200>;
                         bindings = <&kp>, <&kp>;
                 };
         };
 
-        combos {
-                compatible = "zmk,combos";
-                combo_layer_3 {
-                        timeout-ms = <50>;
-                        key-positions = <34 41>;
-                        bindings = <&to 3>;
-                };
-        };
+        // combos {
+        //         compatible = "zmk,combos";
+        //         combo_layer_3 {
+        //                 timeout-ms = <50>;
+        //                 key-positions = <34 41>;
+        //                 bindings = <&to 3>;
+        //         };
+        // };
 
         keymap {
                 compatible = "zmk,keymap";
@@ -67,7 +67,7 @@
                         bindings = <
 // ╭──────────┬───────────┬───────────┬───────────┬───────────┬───────────╮   ╭───────────┬───────────┬───────────┬───────────┬───────────┬───────────╮
 // |   None   |     1     |     2     |     3     |     4     |     5     |   |   BRI-    |   BRI+    |    MUTE   |   VOL-    |   VOL+    |    None   |
-       &none     &kp N1       &kp N2      &kp N3     &bt N4       &kp N5      &kp C_BRI_DEC &kp C_BRI_UP &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP  &none
+       &none     &kp N1       &kp N2      &kp N3     &kp N4       &kp N5      &kp C_BRI_DEC &kp C_BRI_UP &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP  &none
 // ├──────────┼───────────┼───────────┼───────────┼───────────┼───────────┤   ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤
 // |   None   |      6    |     7     |     8     |     9     |     0     |   |           |    LFT    |    DWN    |     UP    |     RGT   |    None   |
        &none      &kp N6     &kp N7      &kp N8      &kp N9      &kp N0           &trans    &kp LEFT     &kp DOWN     &kp UP    &kp RIGHT     &none
