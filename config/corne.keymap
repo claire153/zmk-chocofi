@@ -35,7 +35,7 @@
                 compatible = "zmk,combos";
                 combo_layer_3 {
                         timeout-ms = <50>;
-                        key-positions = <34 41>;
+                        key-positions = <36 41>;
                         bindings = <&to 3>;
                 };
         };
@@ -70,9 +70,9 @@
        &none     &kp N1       &kp N2      &kp N3     &kp N4       &kp N5      &kp C_BRI_DEC &kp C_BRI_UP &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP  &none
 // ├──────────┼───────────┼───────────┼───────────┼───────────┼───────────┤   ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤
 // |   None   |      6    |     7     |     8     |     9     |     0     |   |           |    LFT    |    DWN    |     UP    |     RGT   |    None   |
-       &none      &kp N6     &kp N7      &kp N8      &kp N9      &kp N0           &trans    &kp LEFT     &kp DOWN     &kp UP    &kp RIGHT     &none
+       &none   &hm LCTRL N6 &hm LALT N7   &kp N8      &kp N9      &kp N0          &trans    &kp LEFT     &kp DOWN     &kp UP    &kp RIGHT     &none
 // ├──────────┼───────────┼───────────┼───────────┼───────────┼───────────┤   ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤
-// |   None   |   REDO    |   UNDO    |    CUT    |   COPY    |   PASTE   |   |    BT0    |    BT1    |    BT2    |    BT3    |   BT_CLR  |    None   |
+// |   None   |           |           |           |           |           |   |    BT0    |    BT1    |    BT2    |    BT3    |   BT_CLR  |    None   |
        &none     &trans      &trans      &trans       &trans     &trans      &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_CLR   &none
 // ╰──────────┴───────────┴───────────┼───────────┼───────────┼───────────┤   ├───────────┼───────────┼───────────┴───────────┴───────────┼───────────╯
 //                                    |           |           |           |   |           |           |           |
@@ -92,7 +92,7 @@
        &none    &kp GRAVE    &kp SEMI   &kp COLON   &kp AMPS     &kp PIPE       &kp MINUS   &kp EQUAL   &kp LPAR     &kp RPAR    &kp SQT      &none  
 // ├──────────┼───────────┼───────────┼───────────┼───────────┼───────────┤   ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤
 // |   None   |     ^     |     ~     |    %      |     #     |     $     |   |     _     |     +     |     [     |     ]     |           |    None   |
-      &none     &kp CARET     &kp TILDE  &kp PRCNT     &kp HASH    &kp DLLR     &kp UNDER   &kp PLUS    &kp LBKT     &kp RBKT    &trans       &none
+      &none     &kp CARET   &kp TILDE   &kp PRCNT   &kp HASH    &kp DLLR        &kp UNDER   &kp PLUS    &kp LBKT     &kp RBKT    &trans       &none
 // ╰──────────┴───────────┴───────────┼───────────┼───────────┼───────────┤   ├───────────┼───────────┼───────────┴───────────┴───────────┼───────────╯
 //                                    |           |           |           |   |           |           |           |
                                           &trans      &trans      &trans          &trans      &trans      &trans
@@ -108,7 +108,7 @@
       &none       &trans      &trans      &trans      &trans      &trans          &trans      &trans      &trans      &trans      &trans       &none
 // ├──────────┼───────────┼───────────┼───────────┼───────────┼───────────┤   ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤
 // |   None   |   Trans   |   Trans   |   Trans   |   Trans   |   Trans   |   |   Trans   | SCRL LFT  | SCRL DWN  |  SCRL UP  |  SCRL RGT |   None    |
-      &none       &trans      &trans      &trans      &trans      &trans          &trans  &msc SCRL_LEFT &msc SCRL_DOWN  &msc SCRL_UP &msc SCRL_RIGHT     &none  
+      &none       &trans      &trans      &trans      &trans      &trans         &trans  &msc SCRL_LEFT &msc SCRL_DOWN &msc SCRL_UP &msc SCRL_RIGHT &none  
 // ├──────────┼───────────┼───────────┼───────────┼───────────┼───────────┤   ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤
 // |   None   |   Trans   |   Trans   |   Trans   |   Trans   |   Trans   |   |   Trans   |   Trans   |   Trans   |   Trans   |   Trans   |   None    |
       &none       &trans      &trans      &trans      &trans      &trans          &trans      &trans      &trans      &trans      &trans       &none
