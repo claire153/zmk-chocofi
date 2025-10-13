@@ -31,12 +31,11 @@
                 };
         };
 
-        combos {
-                compatible = "zmk,combos";
-                combo_layer_3 {
-                        timeout-ms = <50>;
-                        key-positions = <36 41>;
-                        bindings = <&to 3>;
+        conditional_layers {
+                compatible = "zmk,conditional-layers";
+                tri_layer {
+                        if-layers = <1 2>;
+                        then-layer = <3>;
                 };
         };
 
@@ -56,7 +55,7 @@
 // |   None   |     Z     |     X     |     C     |     V     |     B     |   |     N     |     M     |     ,     |     .     |     ENT   |    None   |
       &none      &kp Z        &kp X       &kp C       &kp V       &kp B           &kp N       &kp M     &kp COMMA    &kp DOT     &kp RET      &none
 // ╰──────────┴───────────┴───────────┼───────────┼───────────┼───────────┤   ├───────────┼───────────┼───────────┴───────────┴───────────┼───────────╯
-//                                    |    LWR    |   BSPC    |    DEL    |   |    TAB    |    SPC    |    RSE    |
+//                                    |     L1    |   BSPC    |    DEL    |   |    TAB    |    SPC    |     L2    |
 //                                    ╰───────────┴───────────┴───────────╯   ╰───────────┴───────────┴───────────╯
                                           &mo 1   &hm LGUI BSPC &kp DEL         &kp TAB  &hm LSHFT SPACE   &mo 2 
                         >;
