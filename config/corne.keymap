@@ -13,10 +13,7 @@
 #include <dt-bindings/zmk/pointing.h>
 
 // Missing: 
-// opt + arrow
-// hyperkey (space hold?)
-
-// Ideas: home row key + right thumb = opt + bspc
+// cmd tilde
 
 / {
         behaviors {
@@ -24,6 +21,15 @@
                         compatible = "zmk,behavior-hold-tap";
                         #binding-cells = <2>;
                         flavor = "balanced";
+                        tapping-term-ms = <200>;
+                        quick-tap-ms = <175>;
+                        bindings = <&kp>, <&kp>;
+                        require-prior-idle-ms = <150>;
+                };
+                hyper_del: hyperkey_delete {
+                        compatible = "zmk,behavior-hold-tap";
+                        #binding-cells = <2>;
+                        flavor = "tap-preferred";
                         tapping-term-ms = <200>;
                         quick-tap-ms = <175>;
                         bindings = <&kp>, <&kp>;
@@ -56,7 +62,7 @@
 // ╰──────────┴───────────┴───────────┼───────────┼───────────┼───────────┤   ├───────────┼───────────┼───────────┴───────────┴───────────┼───────────╯
 //                                    |     L1    |   BSPC    |    DEL    |   |    TAB    |    SPC    |     L2    |
 //                                    ╰───────────┴───────────┴───────────╯   ╰───────────┴───────────┴───────────╯
-                                          &mo 1   &hm LGUI BSPC &kp DEL         &kp TAB  &hm LSHFT SPACE   &mo 2 
+                                          &mo 1   &hm LGUI BSPC &hyper_del LS(LC(LA(LGUI))) DEL         &kp TAB  &hm LSHFT SPACE   &mo 2 
                         >;
                 };
 
@@ -102,7 +108,7 @@
                         display-name = "Tri Layer";
                         bindings = <
 // ╭──────────┬───────────┬───────────┬───────────┬───────────┬───────────╮   ╭───────────┬───────────┬───────────┬───────────┬───────────┬───────────╮
-// |   None   |   Trans   |   Trans   |   Trans   |   Trans   |   Trans   |   |   Trans   |   Trans   |   Trans   |   Trans   |   Trans   |   None    |
+// |   None   |   Trans   |   Trans   |   Trans   |   Trans   |   Trans   |   |   play    |   Trans   |   Trans   |   Trans   |   Trans   |   None    |
       &none       &trans      &trans      &trans      &trans      &trans          &trans      &trans      &trans      &trans      &trans       &none
 // ├──────────┼───────────┼───────────┼───────────┼───────────┼───────────┤   ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤
 // |   None   |   Trans   |   Trans   |   Trans   |   Trans   |   Trans   |   |   Trans   | SCRL LFT  | SCRL DWN  |  SCRL UP  |  SCRL RGT |   None    |
